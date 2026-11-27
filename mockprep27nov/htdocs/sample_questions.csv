@@ -1,0 +1,14 @@
+exam,subject,topic,question,A,B,C,D,answer,explanation
+OAVS-CS,Reasoning,Direction Sense,Ravi walks 5 km north then turns right and walks 3 km. In which direction is he from the start?,North-East,North-West,South-East,South-West,A,He is 5 km north and 3 km east so he is to the North-East.
+OAVS-CS,Reasoning,Direction Sense,A man faces East and turns 90 degrees clockwise. Which direction does he face now?,North,South,West,East,B,Clockwise from East is South.
+OAVS-CS,Reasoning,Direction Sense,Sita walks west then turns left. Which direction is she facing?,North,South,East,West,B,Left of West is South.
+OAVS-CS,Reasoning,Number Series,"2, 6, 12, 20, ?",28,30,32,36,B,Differences are 4 6 8 10 so the next is 30.
+OAVS-CS,Reasoning,Number Series,"3, 6, 12, 24, ?",36,48,42,30,B,Each term doubles so the next is 48.
+OAVS-CS,Reasoning,Coding-Decoding,If PEN is coded as QFO how is INK coded?,JOL,JNL,IOL,KOL,A,Each letter moves one step forward: I-J N-O K-L.
+OAVS-CS,Reasoning,Blood Relations,"Pointing to a man Anu says: He is the son of my mother's only brother. How is he related to Anu?",Cousin,Brother,Uncle,Nephew,A,Mother's brother's son is a maternal cousin.
+OAVS-CS,English,Synonyms & Antonyms,Synonym of 'rapid':,Slow,Quick,Weak,Late,B,Rapid means quick or fast.
+OAVS-CS,English,Tenses,She ___ to school daily.,go,going,goes,gone,C,Third person singular in simple present takes goes.
+OAVS-CS,Computer Science,Computer Fundamentals,Which part is called the brain of the computer?,RAM,CPU,Monitor,Mouse,B,The CPU processes all instructions.
+OAVS-CS,Computer Science,Computer Fundamentals,1 byte equals how many bits?,4,16,8,2,C,1 byte = 8 bits.
+OAVS-CS,Computer Science,DBMS & SQL,Which SQL command is used to retrieve data?,INSERT,SELECT,UPDATE,DELETE,B,SELECT reads rows from a table.
+SSC,Quantitative Aptitude,Percentage,If 20% of a number is 50 what is the number?,200,250,300,150,B,x = 50 x 100/20 = 250.

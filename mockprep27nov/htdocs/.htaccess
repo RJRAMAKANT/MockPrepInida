@@ -1,0 +1,45 @@
+Options -Indexes
+RewriteEngine On
+
+# If the site is in a subfolder, uncomment and set the folder name here:
+# RewriteBase /yourfolder/
+
+# --- Force all AJAX/endpoint posts to bypass the slug rewrite  ---
+# (safety net — real files already pass through, but this is belt+braces)
+RewriteRule ^(submit|ajax|api|save-attempt|check)\.php$ - [L]
+
+# --- Sitemaps and robots ---
+RewriteRule ^sitemap\.xml$ sitemap.php [L]
+RewriteRule ^robots\.txt$  robots.php  [L]
+
+# --- /exam/CODE  →  ?p=exam&c=CODE ---
+RewriteRule ^exam/([A-Za-z0-9_-]+)/?$ index.php?p=exam&c=$1 [L,QSA]
+
+# --- Serve real files and folders as-is (assets, uploads, admin panel) ---
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# --- /any-slug  →  ?p=any-slug ---
+RewriteRule ^([a-z][a-z0-9-]*)/?$ index.php?p=$1 [L,QSA]
+
+# --- Raise upload/POST limits (InfinityFree-friendly) ---
+# <IfModule mod_php7.c>
+#     php_value post_max_size 32M
+#     php_value upload_max_filesize 32M
+#     php_value max_input_vars 5000
+#     php_value max_execution_time 120
+# </IfModule>
+
+# <IfModule mod_php.c>
+#     php_value post_max_size 32M
+#     php_value upload_max_filesize 32M
+#     php_value max_input_vars 5000
+#     php_value max_execution_time 120
+# </IfModule>
+
+# --- Protect secrets (extended to cover php.txt and other libs) ---
+<FilesMatch "^(config|lib|php)\.(php|txt)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
